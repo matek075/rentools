@@ -1,0 +1,27 @@
+@import './libs/_normalize.scss';
+@import '~notyf/notyf.min.css';
+//@import '~tailwindcss/tailwind.css';
+
+@import '~@fortawesome/fontawesome-svg-core/styles.css';
+@import '~react-image-gallery/styles/scss/image-gallery.scss';
+@import '~react-quill/dist/quill.snow.css';
+@import '~sweetalert2/src/sweetalert2';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body.stopScrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Poppins', 'sans-serif';
+}
+
+#__next {
+  height: 100%;
+}

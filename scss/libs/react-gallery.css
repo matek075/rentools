@@ -1,0 +1,475 @@
+.rug {
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #3d4852;
+}
+.rug img {
+  pointer-events: none;
+  user-select: none;
+}
+.rug .rug-file-input {
+  display: none !important;
+}
+.rug .rug-item {
+  justify-content: center;
+  user-select: none;
+  cursor: grab;
+}
+.rug .rug-items.__card {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  margin: 0 -10px;
+  min-height: 220px;
+}
+@media (max-width: 450px) {
+  .rug .rug-items.__card {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+.rug .rug-items.__card .rug-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rug .rug-items.__list {
+  padding-top: 30px;
+  min-height: 220px;
+}
+.rug .rug-handle {
+  width: 100%;
+  height: 290px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.rug .rug-handle:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  border-radius: 4px;
+  border: 4px solid #3d4852;
+}
+.rug .rug-handle svg.rug-handle-icon {
+  width: 70px;
+}
+.rug .rug-handle svg.rug-handle-icon polyline,
+.rug .rug-handle svg.rug-handle-icon line {
+  fill: none;
+  stroke: #3d4852;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  stroke-linecap: round;
+}
+.rug .rug-handle.__dragging:before {
+  border: 4px dashed #007aff;
+  background-color: rgba(0, 122, 255, 0.15);
+}
+.rug .rug-handle.__dragging svg polyline,
+.rug .rug-handle.__dragging svg line {
+  stroke: #007aff;
+}
+.rug .rug-handle.__dragging .__arrow {
+  animation: 1s up-arrow forwards infinite;
+}
+.rug .rug-handle .rug-handle-info {
+  position: relative;
+}
+.rug .rug-handle .rug-handle-info .rug-handle-drop-text {
+  font-size: 22px;
+}
+.rug .rug-handle .rug-handle-info .rug-handle-button {
+  background-color: #007aff;
+  border-radius: 3px;
+  padding: 7px 12px;
+  font-size: 16px;
+  color: #f5f5f5;
+  text-align: center;
+  cursor: pointer;
+  max-width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+.rug .rug-handle .rug-handle-info .rug-handle-button:hover {
+  background-color: rgba(0, 122, 255, 0.8);
+}
+.rug .rug-handle .rug-handle-info span {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 17px;
+  display: block;
+}
+
+@keyframes up-arrow {
+  0%,
+  50% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 960px) {
+  .rug .rug-handle {
+    height: 170px;
+  }
+  .rug .rug-handle svg {
+    width: 50px;
+  }
+  .rug .rug-handle .rug-handle-drop-text,
+  .rug .rug-handle span {
+    display: none !important;
+  }
+}
+
+.rug-card {
+  width: 200px;
+  height: 200px;
+  background-color: #3d4852;
+  border-radius: 5px;
+  position: relative;
+  font-family: Helvetica;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 10px;
+}
+@media (max-width: 450px) {
+  .rug-card {
+    width: 160px;
+    height: 160px;
+  }
+}
+.rug-card.__error {
+  border: 3px solid #ff2d55;
+}
+.rug-card .rug-card-image {
+  width: 100%;
+  height: 100%;
+  background-position: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.rug-card .rug-card-name {
+  position: absolute;
+  z-index: 15;
+  height: 100px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 12px;
+  white-space: nowrap;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.7) 29%, transparent);
+  background-blend-mode: multiply;
+  color: #f5f5f5;
+}
+.rug-card .rug-card-name > div {
+  margin: 10px;
+  overflow: hidden;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rug-card .rug-card-size {
+  color: #c3c3c3;
+  font-size: 11px;
+}
+.rug-card .rug-card-progress {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+.rug-card .rug-card-progress .__progress-cricle {
+  stroke: #007aff;
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  transition: stroke-dasharray 200ms ease;
+}
+.rug-card .rug-card-progress-count {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+}
+.rug-card .rug-card-refresh {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 20;
+  border: 2px solid transparent;
+}
+.rug-card .rug-card-refresh:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #3d4852;
+}
+.rug-card .rug-card-refresh .__refresh-icon g {
+  fill: #3d4852;
+}
+.rug-card .rug-card-refresh.__spin {
+  animation: __spin 1000ms linear infinite;
+  border: 2px solid #007aff !important;
+}
+.rug-card .rug-card-refresh.__spin .__refresh-icon g {
+  fill: #007aff;
+}
+.rug-card .rug-card-upload-button {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 20;
+  text-align: center;
+  border: 2px solid transparent;
+}
+.rug-card .rug-card-upload-button svg {
+  width: 25px;
+  margin-top: 6px;
+}
+.rug-card .rug-card-upload-button svg polyline,
+.rug-card .rug-card-upload-button svg line {
+  fill: none;
+  stroke: #3d4852;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+  stroke-linecap: round;
+}
+.rug-card .rug-card-upload-button:hover {
+  border: 2px solid #007aff;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.rug-card .rug-card-upload-button:hover svg polyline,
+.rug-card .rug-card-upload-button:hover svg line {
+  stroke: #007aff;
+}
+.rug-card .rug-card-upload-button:hover svg .__arrow {
+  animation: 1s up-arrow forwards infinite;
+}
+.rug-card .rug-card-remove {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  background-color: #3d4852;
+  opacity: 0.75;
+  border-radius: 9999px;
+  margin: 4px;
+  padding: 4px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid transparent;
+  transition: border 200ms ease;
+  cursor: pointer;
+}
+.rug-card .rug-card-remove:hover {
+  border: 1.5px solid #fff;
+}
+.rug-card .rug-card-remove svg {
+  stroke: currentColor;
+  height: 18px;
+  width: 18px;
+}
+
+@keyframes __spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rug-list {
+  width: 100%;
+  background-color: #3d4852;
+  border-radius: 3px;
+  position: relative;
+  font-family: Helvetica;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.rug-list.__error {
+  border: 3px solid #ff2d55;
+}
+.rug-list .rug-list-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: #007aff;
+  border: 3px;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+.rug-list .rug-list-progress.__active {
+  opacity: 1;
+}
+.rug-list .rug-list-progress-count {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: #f5f5f5;
+  font-size: 13px;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+.rug-list .rug-list-progress-count.__active {
+  opacity: 1;
+}
+.rug-list .rug-list-refresh {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 20;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.rug-list .rug-list-refresh:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.rug-list .rug-list-refresh .__refresh-icon g {
+  fill: #3d4852;
+}
+.rug-list .rug-list-refresh.__spin {
+  animation: __spin 1000ms linear infinite;
+}
+.rug-list .rug-list-refresh.__spin .__refresh-icon g {
+  fill: #007aff;
+}
+.rug-list .rug-list-upload-button {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 20;
+  text-align: center;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.rug-list .rug-list-upload-button svg {
+  width: 15px;
+  margin-top: 2px;
+}
+.rug-list .rug-list-upload-button svg polyline,
+.rug-list .rug-list-upload-button svg line {
+  fill: none;
+  stroke: #3d4852;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+  stroke-linecap: round;
+}
+.rug-list .rug-list-upload-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.rug-list .rug-list-upload-button:hover svg polyline,
+.rug-list .rug-list-upload-button:hover svg line {
+  stroke: #007aff;
+}
+.rug-list .rug-list-upload-button:hover svg .__arrow {
+  animation: 1s up-arrow forwards infinite;
+}
+.rug-list .rug-list-image {
+  width: 100px;
+  height: 70px;
+  padding: 5px;
+}
+.rug-list .rug-list-image img {
+  width: 100%;
+  height: 100%;
+}
+.rug-list .rug-list-content {
+  padding: 5px;
+  width: calc(100% - 120px);
+}
+.rug-list .rug-list-content .rug-list-name {
+  color: #f5f5f5;
+  white-space: nowrap;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 40px);
+}
+.rug-list .rug-list-content .rug-list-size {
+  color: #ddd;
+  font-size: 12px;
+  margin-top: 3px;
+}
+.rug-list .rug-list-remove {
+  position: absolute;
+  z-index: 40;
+  top: 0;
+  right: 0;
+  color: #ccc;
+  opacity: 0.75;
+  border-radius: 9999px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rug-list .rug-list-remove svg {
+  stroke: currentColor;
+  height: 22px;
+  width: 22px;
+}
+.rug-list .rug-list-remove:hover {
+  color: #fff;
+}
+
+@keyframes __spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.__sorting .rug-list,
+.__sorting .rug-card {
+  cursor: grab;
+}
+
+.rug-dragging-item {
+  cursor: grabbing;
+}
+.rug-dragging-item > div:not(.rug-list) {
+  transform: scale(1.1);
+}

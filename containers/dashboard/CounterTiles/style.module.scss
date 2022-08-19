@@ -1,0 +1,89 @@
+@import 'scss/shared';
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px 30px;
+  margin: 0 auto;
+
+  .headerCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    .icon {
+      height: 47px;
+      width: 43px;
+      flex: 0 0 100%;
+      color: #d9d9d9;
+    }
+    .counter {
+      font-size: 60px;
+      font-weight: 700;
+      flex: 0 0 100%;
+      line-height: 50px;
+      &Name {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        flex: 0 0 100%;
+      }
+    }
+  }
+  .mainHeaderCard {
+    background-color: #fff;
+  }
+  .semiExtendedCard {
+    .latestContainer {
+      display: flex;
+      flex-wrap: wrap;
+      .latest {
+        margin-bottom: 20px;
+        flex: 0 0 100%;
+        min-height: 70px;
+        min-width: 100%;
+        background-color: #fafafa;
+        border-radius: 8px;
+        padding: 8px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 30px;
+    .semiExtendedCard {
+      grid-row-start: 4;
+    }
+    .extendedCard {
+      grid-column-start: span 2;
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .cards {
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 125px auto auto;
+    margin-bottom: 0;
+    .headerCard {
+      grid-column-start: span 2;
+    }
+    .semiExtendedCard {
+      grid-row-start: 2;
+      grid-column-start: span 5;
+    }
+    .extendedCard {
+      grid-column-start: span 10;
+    }
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .cards {
+    grid-template-columns: repeat(10, minmax(100px, 120px));
+  }
+}

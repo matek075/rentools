@@ -1,0 +1,17 @@
+@import 'scss/shared';
+
+.container {
+  display: flex;
+}
+
+.form {
+  flex: 1 0;
+
+  @include media-breakpoint-up(md) {
+    flex: 0 0 450px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex: 0 0 700px;
+  }
+}

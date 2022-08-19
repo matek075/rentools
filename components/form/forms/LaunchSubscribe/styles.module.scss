@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  min-height: 85px;
+
+  .field {
+    flex: 1 0;
+  }
+
+  .button {
+    flex: 0 1 56px;
+    margin-left: 10px;
+
+    button {
+    }
+  }
+}

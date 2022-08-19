@@ -1,0 +1,44 @@
+@import 'scss/variables';
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+
+  .centerArea {
+    display: flex;
+    flex-direction: column;
+    width: 470px;
+
+    .dot {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: $primary;
+      margin: 15px auto 15px auto;
+    }
+
+    h1 {
+      text-align: center;
+      flex: 1 0;
+      margin-bottom: 0;
+    }
+
+    .cardWrapper {
+      flex: 1 0;
+      width: 100%;
+
+      .logo {
+        img {
+          margin: 0 auto;
+          width: 150px;
+        }
+      }
+
+      .card {
+        flex: 0 0 400px;
+      }
+    }
+  }
+}

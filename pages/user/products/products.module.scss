@@ -1,0 +1,24 @@
+@import 'scss/shared';
+
+.button {
+  position: relative;
+  top: -7px;
+  margin-left: 12px;
+}
+
+.noProducts {
+  margin-top: 50px;
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: $gray-dark-5;
+  }
+
+  .icon {
+    font-size: 6rem;
+  }
+}

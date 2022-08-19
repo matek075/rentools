@@ -1,0 +1,74 @@
+@import 'scss/shared';
+
+$height-list: 110px;
+$height-card: 230px;
+
+.item {
+  display: flex;
+
+  border-radius: $border-radius;
+  overflow: hidden;
+  background: white;
+  height: $height-card;
+  flex-direction: column;
+  flex: 1;
+  margin: 8px 0;
+
+  @include media-breakpoint-up(md) {
+    &.card {
+      flex: 0 0 31%;
+      margin-right: 16px;
+    }
+  }
+
+  .thumbnail {
+    flex: 0 0 150px;
+    background: $gray-light-3;
+  }
+
+  .content {
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .name {
+      font-size: 16px;
+      font-weight: 600;
+      background: $gray-light-3;
+      padding: 10px;
+      display: inline-block;
+      flex: 0 0 20px;
+      width: 100px;
+      border-radius: 4px;
+    }
+
+    .category {
+      padding: 8px;
+      display: inline-block;
+      background: $gray-light-3;
+      flex: 0 0 18px;
+      width: 80px;
+      margin-top: 5px;
+      border-radius: 4px;
+    }
+
+    .price {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      padding: 4px 8px;
+      background: $gray-light-2;
+      border-radius: 4px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .item {
+    .thumbnail {
+      display: block;
+    }
+  }
+}

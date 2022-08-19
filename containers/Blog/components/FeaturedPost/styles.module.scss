@@ -1,0 +1,50 @@
+@import 'scss/shared';
+
+.wrapper {
+  height: 400px;
+  padding: 0 !important;
+  position: relative;
+  .image {
+    pointer-events: none;
+    width: 100%;
+    height: 400px;
+  }
+
+  .container {
+    height: 100%;
+    position: relative;
+  }
+
+  .box {
+    position: absolute;
+    bottom: 20px;
+    padding: 20px;
+    background: white;
+    width: 100%;
+    .content {
+      position: relative;
+      .title {
+        font-size: 30px;
+        margin: 0;
+        padding-bottom: 20px;
+      }
+
+      .date {
+        position: absolute;
+        right: 0;
+        color: $gray-light-45;
+        bottom: -10px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .container {
+    padding: 20px;
+    .box {
+      max-width: 600px;
+      border-radius: $border-radius;
+    }
+  }
+}

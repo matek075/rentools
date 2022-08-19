@@ -1,0 +1,46 @@
+@import 'scss/shared';
+
+
+.svg {
+
+  .circleBackground,
+  .circleProgress {
+    fill: none;
+  }
+
+  .circleBackground {
+    stroke: #ddd;
+  }
+
+  .circleProgress {
+    stroke: $primary;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .circleText {
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 4em;
+    font-weight: 600;
+    fill: $primary;
+  }
+
+
+  &.red {
+    .circleProgress {
+      stroke: red;
+    }
+    .circleText {
+      fill: red;
+    }
+  }
+
+  &.green {
+    .circleProgress {
+      stroke: $success;
+    }
+    .circleText {
+      fill: $success;
+    }
+  }
+}

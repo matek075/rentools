@@ -1,0 +1,23 @@
+// Generated with util/create-component.js
+@import 'scss/shared';
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  //width: 100%;
+}
+
+@media screen and (min-width: 400px) {
+  .dropdown {
+    width: inherit;
+    position: relative;
+  }
+}

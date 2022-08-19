@@ -1,0 +1,217 @@
+@import 'scss/shared';
+
+.banner {
+  position: relative;
+  background-image: url('/landings/dla-wypozyczajacych/background-image.webp');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center 35%;
+  height: calc(100vh - 70px);
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.65);
+  }
+  h1.title {
+    font-size: 25px;
+    color: $white;
+    z-index: 2;
+    margin-bottom: 20vh;
+  }
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .actions {
+    position: absolute;
+    bottom: 5vh;
+    display: grid;
+    gap: 0 30px;
+    grid-template-columns: repeat(2, minmax(auto, 200px));
+  }
+}
+
+.highlightBlock {
+  position: absolute;
+  transform: translate(1%, 2%) scale(1.12);
+  visibility: hidden;
+}
+
+.splitSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  p {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  h4 {
+    font-weight: 600;
+  }
+  .left {
+    order: 1;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    &_reverse {
+      order: 2;
+      flex: 0 0 100%;
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+  .right {
+    order: 2;
+    flex: 0 0 100%;
+
+    &_reverse {
+      order: 1;
+      flex: 0 0 100%;
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+}
+
+.blurbs {
+  display: flex;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+  & > div {
+    flex: 1 0 100%;
+    margin: 20px 0;
+  }
+}
+
+.blurbsBottom {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: minmax(auto, 320px);
+  gap: 80px 50px;
+}
+@include media-breakpoint-up(sm) {
+  .banner {
+    h1.title {
+      font-size: 35px;
+    }
+  }
+
+  .splitSection {
+    .right,
+    .right_reverse {
+      flex: 0 0 70%;
+      margin-bottom: 30px;
+    }
+    .left,
+    .left_reverse {
+      flex: 0 0 70%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .banner {
+    height: 75vh;
+    .actions {
+      position: absolute;
+      grid-template-columns: repeat(2, minmax(max-content, 200px));
+    }
+    h1.title {
+      font-size: 35px;
+    }
+  }
+
+  .blurbs > div {
+    flex: 0 0 50%;
+  }
+
+  .blurbsBottom {
+    grid-template-columns: repeat(2, minmax(270px, 320px));
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .banner {
+    .overlay {
+      background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+    h1.title {
+      color: $gray-dark-8;
+      margin-bottom: 0;
+    }
+  }
+  .highlightBlock {
+    height: 400px;
+    // scale: 1.12;
+    visibility: visible;
+    max-width: 996px;
+  }
+  .splitSection {
+    .left,
+    .left_reverse {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      order: 1;
+      flex: 0 0 50%;
+    }
+
+    .right,
+    .right_reverse {
+      order: 2;
+      flex: 0 0 40%;
+      margin-bottom: 0;
+      margin-left: 40px;
+    }
+  }
+  .blurbs {
+    & > div {
+      flex: 0 0 25%;
+      margin: 0;
+    }
+  }
+  .blurbsBottom {
+    grid-template-columns: repeat(3, minmax(270px, 320px));
+  }
+}
+
+// Section background and custom headers
+
+.darkWrapper {
+  background: $gray-light-3;
+  h6 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+
+.lightWrapper {
+  background: $white;
+  h6 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+
+.primaryWrapper {
+  background: $gray-light-3;
+  h6 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+}

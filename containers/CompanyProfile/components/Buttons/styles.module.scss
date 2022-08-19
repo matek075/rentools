@@ -1,0 +1,44 @@
+@import 'scss/shared';
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  .links {
+    flex: 1 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .link {
+      margin-left: 15px;
+      font-size: 17px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  .reviewButton {
+    flex: 1 0 100%;
+    margin-bottom: 15px;
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+  .wrapper {
+    align-items: center;
+    .links {
+      flex: 0 0 70%;
+    }
+
+    .reviewButton {
+      flex: 0 0 30%;
+      text-align: right;
+      margin-bottom: 0;
+    }
+  }
+}

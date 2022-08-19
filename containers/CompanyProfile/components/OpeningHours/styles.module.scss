@@ -1,0 +1,27 @@
+@import 'scss/shared';
+
+.openingHours {
+  .day {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 15px;
+    .hours {
+      font-weight: 500;
+      font-size: 13px;
+      // flex: 0 0 100%;
+    }
+  }
+}
+
+// @include media-breakpoint-up(sm) {
+//   .openingHours {
+//     .day {
+//       .hours {
+//         flex: 0 0 auto;
+//       }
+//     }
+//   }
+// }

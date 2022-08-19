@@ -1,0 +1,53 @@
+.root {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  margin: 5px 0 20px;
+  background: #efefef;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  border-radius: 19px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active {
+    transform: scale(1.05);
+  }
+
+  .input {
+    position: absolute;
+  }
+
+  .icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #a7a7a7;
+
+    &.loadingIcon {
+      left: 30%;
+      top: 30%;
+    }
+  }
+
+  .caption {
+    position: absolute;
+  }
+
+  .thumb {
+    width: 120px;
+    height: 120px;
+    position: relative;
+
+    .img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+    }
+  }
+}

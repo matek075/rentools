@@ -1,0 +1,28 @@
+@import 'scss/shared';
+
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+
+  .post {
+    flex: 0 0 100%;
+    text-align: left;
+
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 33%;
+      padding-right: 20px;
+      margin-bottom: 0;
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.cta {
+  text-align: center;
+}

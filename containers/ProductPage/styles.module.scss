@@ -1,0 +1,84 @@
+@import 'scss/shared';
+
+.bar {
+  background: $gray-dark-7;
+  color: white;
+  font-size: 12px;
+
+  .icon {
+    margin-right: 4px;
+  }
+}
+
+.page {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  .content {
+    flex: 1 0;
+
+    .id {
+      font-size: 14px;
+      font-weight: 500;
+      color: $gray-dark-5;
+      margin-bottom: 12px;
+    }
+  }
+
+  .card {
+    margin: 10px 0;
+
+    h1 {
+      margin-top: 0;
+      font-size: 38px;
+      line-height: 38px;
+    }
+  }
+
+  .sidebar {
+    flex: 1 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .page {
+    flex-direction: row;
+    .content {
+      padding-right: 15px;
+    }
+
+    .sidebar {
+      padding-left: 10px;
+      flex: 0 0 300px;
+      .infos {
+        .info {
+          .icon {
+            display: none;
+          }
+          .text {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .page {
+    .sidebar {
+      flex: 0 0 380px;
+
+      .infos {
+        .info {
+          .icon {
+            display: inline-block;
+          }
+          .text {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

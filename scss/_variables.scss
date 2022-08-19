@@ -1,0 +1,36 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+$success: #2dc82d;
+$danger: #f06666;
+$orange: #fda743;
+$yellow: #ffe756;
+
+// NEW grays
+$white: #ffffff;
+$gray-light-1: $white;
+$gray-light-2: #f8fbff;
+$gray-light-3: #f3f6fb;
+$gray-light-4: #d8dde7;
+$gray-light-45: #b6bfcd;
+$gray-dark-5: #858d9f;
+$gray-dark-6: #5b6271;
+$gray-dark-7: #37383c;
+$gray-dark-8: #141415;
+
+$primary: #ffe300;
+$secondary: #20ace9;
+$tertiary: #1d1d1d;
+
+$border-radius: 8px;
+$border-radius-dropdown: 6px;
+$box-shadow-dropdown: 0px 4px 10px rgba(23, 70, 128, 0.15);
+
+$container-size: 1140px;
+$transition: all 0.2s ease-in-out;

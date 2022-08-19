@@ -1,0 +1,26 @@
+@import 'scss/shared';
+
+.container {
+  width: 100%;
+
+  .image {
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .date {
+    font-size: 14px;
+    color: $gray-light-45;
+  }
+
+  &:hover {
+    .title {
+      text-decoration: underline;
+    }
+  }
+}

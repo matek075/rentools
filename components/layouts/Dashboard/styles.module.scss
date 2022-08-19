@@ -1,0 +1,12 @@
+.page {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  padding: 20px;
+  flex: 1;
+  min-height: calc(100vh - 70px);
+  overflow-y: auto;
+  position: relative;
+}

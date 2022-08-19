@@ -1,0 +1,35 @@
+@import 'scss/shared';
+
+.editor {
+
+  :global(.ql-toolbar) {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    border: 2px solid $gray-light-4;
+    border-bottom: transparent;
+  }
+
+  :global(.ql-container) {
+    border: 2px solid $gray-light-4;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    font-size: 16px;
+  }
+
+  :global(.ql-formats) {
+    button {
+      margin-top: 0;
+    }
+  }
+
+  :global(.ql-editor) {
+    min-height: 200px;
+  }
+
+  &.invalid {
+    :global(.ql-toolbar),
+    :global(.ql-container) {
+      border-color: red;
+    }
+  }
+}

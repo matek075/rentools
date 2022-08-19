@@ -1,0 +1,9 @@
+@import '../../scss/shared';
+
+.form {
+}
+
+@include media-breakpoint-up(md) {
+  .form {
+  }
+}

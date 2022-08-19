@@ -1,0 +1,60 @@
+@import 'scss/shared';
+.price {
+  .value {
+    margin-top: 5px;
+    font-size: 38px;
+    display: inline-block;
+    font-weight: 800;
+    line-height: 38px;
+  }
+
+  .range {
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 600;
+    color: $gray-light-4;
+    margin-left: 4px;
+    text-transform: lowercase;
+  }
+}
+
+.secondaryPrice {
+  .value {
+    font-size: 20px;
+    display: inline-block;
+    font-weight: 800;
+    color: $gray-dark-7;
+  }
+
+  .range {
+    font-size: 12px;
+    display: inline-block;
+    font-weight: 500;
+    color: $gray-light-4;
+    margin-left: 4px;
+    text-transform: lowercase;
+  }
+}
+
+.infos {
+  .info {
+    margin-top: 8px;
+    .icon {
+      display: inline-block;
+      margin-right: 8px;
+      color: $gray-dark-6;
+    }
+
+    .text {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      color: $gray-light-45;
+
+      strong {
+        font-weight: 500;
+        color: $gray-dark-6;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import 'scss/shared';
+.days {
+  .day {
+    display: grid;
+    padding-bottom: 5px;
+    grid-template-columns: 1fr;
+    gap: 8px 0;
+  }
+  .dayTop {
+    grid-column-start: span 1;
+
+    h6 {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+
+  .toInputs,
+  .toLabel {
+    display: grid;
+    gap: 10px 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  .fromLabel,
+  .fromInputs {
+    display: grid;
+    gap: 10px 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  .fromLabel {
+    grid-row-start: 2;
+  }
+  .toLabel {
+    grid-row-start: 4;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .days {
+    gap: 0;
+    .day {
+      grid-template-columns: minmax(30%, 40%) minmax(10px, auto) minmax(30%, 40%);
+    }
+    .dayTop {
+      grid-column-start: span 3;
+    }
+    .toInputs,
+    .toLabel {
+      grid-column-start: 3;
+      gap: 0 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+    .fromLabel,
+    .fromInputs {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 10px;
+    }
+    .fromLabel {
+      grid-row-start: auto;
+    }
+    .toLabel {
+      grid-row-start: auto;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .days {
+    .day {
+      grid-template-columns: minmax(180px, 30%) minmax(80px, auto) minmax(220px, 30%);
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .days {
+    .day {
+      grid-template-columns: minmax(180px, 40%) minmax(80px, auto) minmax(220px, 40%);
+    }
+  }
+}

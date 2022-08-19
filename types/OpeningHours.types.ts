@@ -1,0 +1,54 @@
+export interface OpeningHours {
+  id: number;
+  mondayFrom: string | null;
+  mondayTo: string | null;
+  tuesdayFrom: string | null;
+  tuesdayTo: string | null;
+  wednesdayFrom: string | null;
+  wednesdayTo: string | null;
+  thursdayFrom: string | null;
+  thursdayTo: string | null;
+  fridayFrom: string | null;
+  fridayTo: string | null;
+  saturdayFrom: string | null;
+  saturdayTo: string | null;
+  sundayFrom: string | null;
+  sundayTo: string | null;
+}
+export interface ParseOpeningHours {
+  mondayClosed: boolean;
+  tuesdayClosed: boolean;
+  wednesdayClosed: boolean;
+  thursdayClosed: boolean;
+  fridayClosed: boolean;
+  saturdayClosed: boolean;
+  sundayClosed: boolean;
+  mondayFromHours: string | null;
+  mondayFromMinutes: string | null;
+  mondayToHours: string | null;
+  mondayToMinutes: string | null;
+  tuesdayFromHours: string | null;
+  tuesdayFromMinutes: string | null;
+  tuesdayToHours: string | null;
+  tuesdayToMinutes: string | null;
+  wednesdayFromHours: string | null;
+  wednesdayFromMinutes: string | null;
+  wednesdayToHours: string | null;
+  wednesdayToMinutes: string | null;
+  thursdayFromHours: string | null;
+  thursdayFromMinutes: string | null;
+  thursdayToHours: string | null;
+  thursdayToMinutes: string | null;
+  fridayFromHours: string | null;
+  fridayFromMinutes: string | null;
+  fridayToHours: string | null;
+  fridayToMinutes: string | null;
+  saturdayFromHours: string | null;
+  saturdayFromMinutes: string | null;
+  saturdayToHours: string | null;
+  saturdayToMinutes: string | null;
+  sundayFromHours: string | null;
+  sundayFromMinutes: string | null;
+  sundayToHours: string | null;
+  sundayToMinutes: string | null;
+}

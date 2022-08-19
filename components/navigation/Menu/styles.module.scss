@@ -1,0 +1,60 @@
+@import 'scss/shared';
+
+$menu-width: 80px;
+$menu-background: #1c1c1c;
+
+.menu {
+  display: none;
+  width: 80px;
+  flex-direction: column;
+  background: $menu-background;
+  min-height: calc(100vh - 70px);
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.items {
+  padding: 15px 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  .icon {
+    color: $gray-light-4;
+    svg {
+      width: 0.8em;
+    }
+
+    &.comment {
+    }
+  }
+
+  .label {
+    font-size: 12px;
+    color: $gray-light-4;
+    font-weight: 500;
+    margin-top: -2px;
+  }
+
+  &:hover {
+    background: lighten($menu-background, 5%);
+  }
+
+  &.active {
+    background: lighten($menu-background, 10%);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .menu {
+    display: flex;
+  }
+}

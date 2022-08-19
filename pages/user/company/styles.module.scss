@@ -1,0 +1,29 @@
+@import 'scss/shared';
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  .left {
+    flex: 0 0 100%;
+  }
+
+  .right {
+    flex: 0 0 100%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .wrapper {
+    .left {
+      padding-right: 10px;
+      flex: 0 0 50%;
+    }
+
+    .right {
+      padding-left: 10px;
+      flex: 0 0 50%;
+
+    }
+  }
+}

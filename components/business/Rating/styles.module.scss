@@ -1,0 +1,9 @@
+@import 'scss/shared';
+
+$rating-color: #ffe61a;
+
+.rating {
+  .star {
+    color: $rating-color;
+  }
+}

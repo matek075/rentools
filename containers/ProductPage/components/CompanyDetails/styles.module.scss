@@ -1,0 +1,33 @@
+.logo {
+  margin-top: 12px;
+  max-height: 100px;
+}
+
+.company {
+  margin-top: 12px;
+  .name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .address {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .map {
+    margin: 12px 0 8px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .cityName {
+      margin-top: 6px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+.footer {
+  margin-top: 4px;
+}

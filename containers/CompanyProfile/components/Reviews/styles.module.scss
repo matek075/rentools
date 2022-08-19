@@ -1,0 +1,25 @@
+@import 'scss/shared';
+
+.reviews {
+  .login {
+    font-size: 15px;
+    color: $gray-light-45;
+
+    .link {
+      color: $secondary;
+      font-weight: 500;
+    }
+  }
+
+  .form {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .reviews {
+    .form {
+      max-width: 60%;
+    }
+  }
+}

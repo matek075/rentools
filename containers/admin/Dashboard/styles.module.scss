@@ -1,0 +1,76 @@
+
+@import 'scss/shared';
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  .left {
+    flex: 0 0 100%;
+  }
+
+  .right {
+    flex: 0 0 100%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .wrapper {
+    .left {
+      padding-right: 10px;
+      flex: 0 0 50%;
+    }
+
+    .right {
+      padding-left: 10px;
+      flex: 0 0 50%;
+
+    }
+  }
+}
+
+
+.cards {
+  display: flex;
+
+  .card {
+    flex: 0 0 50%;
+
+    & > div {
+      position: relative;
+    }
+
+    .label {
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .caption {
+      font-size: 16px;
+      font-weight: 500;
+      color: $gray-light-45;
+    }
+
+    .link {
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      font-size: 13px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .cards {
+    .card {
+      flex: 0 0 20%;
+      padding-right: 15px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

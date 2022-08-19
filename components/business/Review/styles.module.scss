@@ -1,0 +1,24 @@
+@import 'scss/shared';
+
+.review {
+  margin: 15px 0;
+  .content {
+    margin: 12px 0;
+    font-size: 14px;
+
+    &.noReview {
+      color: $gray-light-45;
+    }
+  }
+
+  .author {
+    font-size: 15px;
+    font-weight: 500;
+    color: $gray-dark-6;
+  }
+
+  .created {
+    font-size: 14px;
+    color: $gray-light-4;
+  }
+}

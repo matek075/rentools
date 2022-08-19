@@ -1,0 +1,40 @@
+@import 'scss/shared';
+
+.blog {
+  .posts {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .post {
+      flex: 0 0 100%;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .blog {
+    .posts {
+      min-height: 600px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .post {
+        padding: 15px;
+        flex: 0 0 50%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .blog {
+    .posts {
+      flex-direction: row;
+      flex-wrap: wrap;
+      .post {
+        flex: 0 0 33%;
+      }
+    }
+  }
+}

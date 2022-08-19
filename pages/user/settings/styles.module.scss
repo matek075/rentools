@@ -1,0 +1,27 @@
+@import 'scss/shared';
+
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+
+  .left {
+    flex: 0 0 100%;
+  }
+  .right {
+    flex: 0 0 100%;
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+  .page {
+    .left {
+      flex: 0 0 50%;
+      padding-right: 15px;
+    }
+    .right {
+      flex: 0 0 50%;
+    }
+  }
+}

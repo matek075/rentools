@@ -1,0 +1,17 @@
+.row {
+  margin-top: 12px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  button {
+    margin-top: 25px;
+  }
+
+  &:focus-within {
+    label {
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@import 'scss/shared';
+
+.wrapper {
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.breadcrumbWrapper {
+  flex: 0 1;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  text-overflow: ellipsis;
+
+  &:last-of-type {
+    .divider {
+      display: none;
+    }
+  }
+}
+
+.whiteBackground {
+  background-color: #fff;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: bold;
+  margin-top: 3px;
+  color: #141415;
+
+  &:hover {
+    color: #141415;
+    text-decoration: none;
+  }
+}
+
+.breadcrumbHome {
+  width: 18px;
+  height: 16px;
+  color: black;
+  position: relative;
+  top: 2px;
+}
+
+.divider {
+  margin: 0 16px;
+}
+
+.dividerImage {
+  width: 7px;
+  height: 10px;
+}
+
+@include media-breakpoint-up(md) {
+  .breadcrumbWrapper {
+    display: flex;
+  }
+}

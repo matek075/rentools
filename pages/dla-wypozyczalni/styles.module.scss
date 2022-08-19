@@ -1,0 +1,280 @@
+@import 'scss/shared';
+
+.banner {
+  background: linear-gradient(180deg, #ffe300 0%, #dcc400 100%);
+  padding: 20px;
+  position: relative;
+
+  .content {
+    width: 100%;
+    position: relative;
+
+    .left {
+      max-width: 650px;
+      position: relative;
+    }
+  }
+
+  .highlight {
+    color: white;
+    margin-top: 10px;
+    display: inline-block;
+
+    left: 15px;
+    top: 10px;
+
+    position: relative;
+  }
+
+  h1.title {
+    margin-top: -50px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .highlightBlock {
+    position: relative;
+    bottom: -140px;
+    width: 400px;
+    left: -20px;
+    display: inline-block;
+  }
+
+  .sub {
+    font-weight: 500;
+    margin-top: 20px;
+    max-width: 500px;
+  }
+
+  .actions {
+    margin-top: 20px;
+
+    a {
+      margin-right: 10px;
+    }
+  }
+
+  .image {
+    display: none;
+  }
+}
+
+.darkWrapper {
+  background: #212121;
+
+  h2 {
+    color: white;
+  }
+}
+
+.darkLightWrapper {
+  background: #2d2d2d;
+
+  h2 {
+    color: white;
+  }
+}
+
+.primaryWrapper {
+  background: $primary;
+}
+
+.blurbs {
+  display: flex;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+
+  & > div {
+    flex: 1 0 100%;
+    margin: 20px 0;
+  }
+}
+
+.light {
+  color: white;
+}
+
+.crmSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .left {
+    order: 2;
+    flex: 0 0 100%;
+    padding-right: 40px;
+
+    p {
+      font-size: 18px;
+      color: white;
+    }
+  }
+
+  .right {
+    order: 1;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.listItem {
+  margin: 20px 0;
+  display: flex;
+
+  .icon {
+    width: 28px;
+    height: 28px;
+    color: white;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  .text {
+    display: inline-block;
+    font-size: 15px;
+    color: white;
+  }
+}
+
+.new {
+  font-size: 12px;
+  color: $gray-dark-8;
+  background: #ffc633;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.logoCrm {
+  margin-top: 5px;
+  display: inline-block;
+  img {
+    display: inline-block;
+    width: 190px;
+  }
+
+  .crm {
+    top: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    padding: 6px 10px 5px;
+    background: white;
+    color: $gray-dark-8;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.blurbsBottom {
+  display: flex;
+  margin-top: 80px;
+  flex-wrap: wrap;
+
+  & > div {
+    flex: 1 0 100%;
+    margin: 30px 0;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .banner {
+    .highlight {
+      left: 50px;
+      top: 5px;
+    }
+
+    .highlightBlock {
+      bottom: -90px;
+      width: 450px;
+      left: 0;
+    }
+  }
+
+  .blurbsBottom {
+    & > div {
+      flex: 0 0 50%;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .blurbs {
+    & > div {
+      flex: 0 0 50%;
+    }
+  }
+
+  .blurbsBottom {
+    & > div {
+      flex: 0 0 33%;
+    }
+  }
+
+  .listItem {
+    .text {
+      font-size: 19px;
+    }
+  }
+
+  .banner {
+    .image {
+      width: 400px;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+    }
+
+    .highlight {
+      left: 30px;
+      top: -10px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .crmSection {
+    .left {
+      order: 1;
+      flex: 0 0 60%;
+    }
+
+    .right {
+      order: 2;
+      flex: 0 0 40%;
+      margin-bottom: 0;
+    }
+  }
+
+  .banner {
+    .image {
+      display: block;
+      top: 50px;
+      right: 20px;
+      width: 500px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .banner {
+    .image {
+      top: 20px;
+      right: 20px;
+      width: 600px;
+    }
+  }
+
+  .blurbs {
+    & > div {
+      flex: 0 0 25%;
+      margin: 0;
+    }
+  }
+}

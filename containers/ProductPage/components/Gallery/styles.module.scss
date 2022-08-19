@@ -1,0 +1,46 @@
+@import 'scss/shared';
+
+.wrapper {
+  .gallery {
+    margin-top: 15px;
+    :global(.image-gallery-slides) {
+      border-radius: $border-radius;
+      overflow: hidden;
+    }
+
+    :global(.image-gallery-image) {
+      height: 400px;
+    }
+
+    :global(.image-gallery-thumbnail) {
+      width: 150px;
+      border-radius: $border-radius;
+    }
+
+    :global(.image-gallery-thumbnails .image-gallery-thumbnails-container) {
+      text-align: left;
+    }
+
+    :global(.image-gallery-thumbnail .image-gallery-thumbnail-image) {
+      border-radius: 8px;
+      height: 100px;
+    }
+
+    :global(.image-gallery-thumbnail-inner) {
+      max-height: 100px;
+    }
+
+    :global(.image-gallery-thumbnail.active),
+    :global(.image-gallery-thumbnail:focus) {
+      border-color: $secondary;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      :global(.image-gallery-thumbnail:hover) {
+        border-color: $secondary;
+        transform: scale(1.02);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}

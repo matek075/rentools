@@ -1,0 +1,21 @@
+@import '../../../scss/shared';
+
+.tabs {
+  margin: 40px 0 35px;
+  display: flex;
+  flex-direction: row;
+
+  .tab {
+    flex: 0 1;
+    margin-right: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 3px;
+    white-space: nowrap;
+
+    &.selected {
+      color: $secondary;
+      border-bottom: 2px solid $secondary;
+    }
+  }
+}

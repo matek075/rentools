@@ -1,0 +1,50 @@
+@import 'scss/shared';
+
+.subMenu > .item {
+  border-radius: 0 !important;
+}
+
+.item {
+  color: black;
+  padding: 12px 24px;
+  font-size: 14px;
+  line-height: 24px;
+  background: white;
+  min-width: 200px;
+
+  &.withSubmenu {
+    padding: 0;
+    background: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: black;
+    background: $gray-light-2;
+    cursor: pointer;
+    outline-offset: -1px;
+  }
+
+  &.selected {
+    background: $primary;
+    color: white;
+    border-radius: 2px;
+  }
+
+  &:first-child {
+    border-top-left-radius: $border-radius-dropdown;
+    border-top-right-radius: $border-radius-dropdown;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: $border-radius-dropdown;
+    border-bottom-right-radius: $border-radius-dropdown;
+  }
+}
+
+.subMenu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}

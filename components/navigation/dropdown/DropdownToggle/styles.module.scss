@@ -1,0 +1,22 @@
+@import 'scss/shared';
+
+.toggle {
+  display: inline-block;
+  width: 100%;
+}
+
+.toggleArrow {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  color: $gray-dark-5;
+}
+
+.open {
+  background: $gray-light-2;
+}
+
+@media screen and (min-width: 400px) {
+}

@@ -1,0 +1,89 @@
+@import 'scss/shared';
+
+.icons {
+  margin-top: 15px;
+  text-align: right;
+  padding-right: 8px;
+  margin-bottom: 15px;
+
+  .icon {
+    color: $gray-dark-5;
+    font-size: 23px;
+    margin-left: 15px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.selected {
+      color: $secondary;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .sidebar {
+    flex: 0 0 100%;
+  }
+
+  .items {
+    flex: 0 0 100%;
+
+    .inner {
+      display: flex;
+
+      &.list {
+        flex-wrap: wrap;
+      }
+
+      &.cards {
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &.loading {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .content {
+    .items {
+      .inner {
+        &.cards {
+          margin-left: -12px;
+          margin-right: -12px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .icons {
+    margin-top: 0;
+  }
+  .content {
+    .sidebar {
+      flex: 0 0 300px;
+    }
+
+    .items {
+      margin-left: 20px;
+      flex: 1 0;
+
+      .cards {
+        margin-top: -8px;
+        margin-right: -16px;
+        flex-direction: row;
+        align-items:baseline;
+      }
+    }
+  }
+}

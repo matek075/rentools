@@ -1,0 +1,82 @@
+@import 'scss/shared';
+
+.container {
+  position: fixed;
+  z-index: 99999;
+  width: 90%;
+  left: 5%;
+  max-height: 80vh;
+  padding: 0 8px;
+  opacity: 0;
+
+  &.shown {
+    opacity: 1;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 99999;
+    overflow-y: auto;
+    box-shadow: $box-shadow-dropdown;
+    border-radius: $border-radius-dropdown;
+
+    .menu {
+      display: flex;
+
+      z-index: 99999;
+
+      &.top {
+        //margin-top: -10px;
+      }
+
+      &.rendering {
+        opacity: 0;
+      }
+
+      &.row {
+        padding: 16px;
+        flex-direction: row;
+        width: 296px;
+        flex-wrap: wrap;
+
+        &2 {
+          width: 273px;
+          & > a,
+          & > div {
+            flex: 0 0 50%;
+            padding: 8px;
+            min-width: 0 !important;
+          }
+        }
+
+        &4 {
+          & > a,
+          & > div {
+            flex: 0 0 25%;
+            padding: 8px;
+            min-width: 0 !important;
+          }
+        }
+      }
+
+      &.column {
+        flex-direction: column;
+
+        & a[role='menuitem'],
+        & div[role='none'] {
+          min-width: 240px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .container {
+    width: inherit;
+    left: inherit;
+  }
+}

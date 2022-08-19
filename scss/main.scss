@@ -1,0 +1,12 @@
+@import './typography';
+@import './variables';
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f3f3f3;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,31 @@
+@import 'scss/shared';
+
+.section {
+  padding: 30px 0;
+  background: $gray-light-2;
+}
+
+.socialItems {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.socialItem {
+  margin: 10px 15px;
+  flex: 0 1;
+  display: flex;
+
+  .icon {
+    flex: 1 0 30px;
+    margin-right: 10px;
+  }
+
+  .name {
+    flex: 1 0;
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
